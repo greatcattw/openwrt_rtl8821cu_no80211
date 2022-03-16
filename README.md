@@ -1,11 +1,9 @@
 # openwrt_rtl8821cu_no80211
 
-WiFi dongle: 
-	rtl8811cu 0bda:c811
-Openwrt Linux : 
-	21.02.1
-Linux Version : 
-	5.4.154
+WiFi dongle: rtl8811cu 0bda:c811
+
+Openwrt Linux : 21.02.1
+Linux Version : 5.4.154
 
 Openwrt platform : mt7688 LinkIt Smart 7688
 
@@ -25,16 +23,15 @@ select M at
 	Kernel modules
 	Wireless Drivers
 	kmod-rtl8821cu
- 
+
 make openrt/package/kernel/rtl8821cu/compile V=s
 
-rtl8812au.ko at 
-  openwrt/staging_dir/target-mipsel_musl/root-ramips/lib/modules/5.4.154/
+rtl8812au.ko at openwrt/staging_dir/target-mipsel_musl/root-ramips/lib/modules/5.4.154/
 
 //---verify
 [openwrt v5.4.154]+[rtl8811cu] --- [AP : greatcat5G : 192.168.2.1]
 
-#off debug message
+//off debug message
 echo 0 > /proc/net/rtl8821cu/log_level
 
 // as a station, link to AP
@@ -47,5 +44,5 @@ udhcpc -i wlan1
 // https://downloads.openwrt.org/releases/21.02.1/packages/mipsel_24kc/base/
 // wireless-tools_29-6_mipsel_24kc.ipk 
 
-//---test
+// test
 ping 192.168.2.1
