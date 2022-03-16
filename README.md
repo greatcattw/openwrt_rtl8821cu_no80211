@@ -1,9 +1,11 @@
 # openwrt_rtl8821cu_no80211
 
-WiFi dongle: rtl8811cu 0bda:c811
-
-Openwrt Linux : 21.02.1
-Linux Version : 5.4.154
+WiFi dongle: 
+	rtl8811cu 0bda:c811
+Openwrt Linux : 
+	21.02.1
+Linux Version : 
+	5.4.154
 
 Openwrt platform : mt7688 LinkIt Smart 7688
 
